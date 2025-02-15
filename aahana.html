@@ -8,13 +8,12 @@
     <title>Courses</title>
     <style>
         body {
-            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 20px;
             padding: 20px;
-            background-color: #ffe7e7;
         }
         .course {
-            border: 2px solid #4d1322;
+            border: 1px solid #ccc;
             padding: 15px;
             margin-bottom: 10px;
         }
@@ -42,25 +41,10 @@
         </div>
     </div>
     <script>
-        function searchCourse() {
-            let input = document.getElementById("search").value.toLowerCase();
-            let courses = document.getElementsByClassName("course");
-            for (let course of courses) {
-                let title = course.getElementsByTagName("h3")[0].innerText.toLowerCase();
-                course.style.display = title.includes(input) ? "block" : "none";
-            }
-        }
-       
-        function addComment(button) {
-            let comment = prompt("Enter your comment:");
-            if (comment) {
-                let p = document.createElement("p");
-                p.innerText = "Comment: " + comment;
-                button.parentElement.appendChild(p);
-            }
-        }
+        
     </script>
     <script type="text/javascript" src="savingUserInput.js"></script>
+    <script src="aahana.js"></script>
     <!--new js file-->
     
 </body>
