@@ -1,0 +1,64 @@
+<!--aahana file-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .course {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Courses</h1>
+    <input type="text" id="search" placeholder="Search courses...">
+    <button onclick="searchCourse()">Search</button>
+    <div id="courses">
+        <div class="course">
+            <h3>CICS 110</h3>
+            <p>Description of CICS 110</p>
+            <button onclick="addComment(this)">Add Comment</button>
+        </div>
+        <div class="course">
+            <h3>CICS 160</h3>
+            <p>Description of CICS 160</p>
+            <button onclick="addComment(this)">Add Comment</button>
+        </div>
+        <div class="course">
+            <h3>CICS 210</h3>
+            <p>Description of CICS 210</p>
+            <button onclick="addComment(this)">Add Comment</button>
+        </div>
+    </div>
+    <script>
+        function searchCourse() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let courses = document.getElementsByClassName("course");
+            for (let course of courses) {
+                let title = course.getElementsByTagName("h3")[0].innerText.toLowerCase();
+                course.style.display = title.includes(input) ? "block" : "none";
+            }
+        }
+       
+        function addComment(button) {
+            let comment = prompt("Enter your comment:");
+            if (comment) {
+                let p = document.createElement("p");
+                p.innerText = "Comment: " + comment;
+                button.parentElement.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>
+
