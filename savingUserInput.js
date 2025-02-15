@@ -1,33 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <ol>
-        <li class = "row">
-            <h4 class = "title">
-                CS101
-            </h4>
-            <div classes = "bottom">
+savingUserInput.js
 
-
-                <p class = "timestamp">
-                    02/15/2025
-                
-                    </p>
-                    <p class = "comment -count">
-                        CS101 Comments
-                        <!--im working on the button-->
-                        <!--test-->
-                        <!-- This is saving changes to html u/i -->
-
-                        <script>
-                           
-                        const userCommentInput = document.getElementbyId('comment');
+const userCommentInput = document.getElementbyId('comment');
                         const saveStatus = document.getElementById('save-status');
                         function debounce(func, delay) {
                             let timeoutId;
@@ -56,20 +29,3 @@
                   });
 
                 commentInput.addEventListener('input', saveData);
-
-
-                
-                    </script>
-
-
-                        </script>
-                        
-                    </p>
-                </p>
-            </div>
-
-            </li>
-    </ol>
-    <script type="text/javascript" src="savingUserInput.js"></script>
-</body>
-</html>
